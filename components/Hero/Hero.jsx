@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ThreeJSBackground from '../ThreeJSBackground';
+import Image from 'next/image';
 
 const Hero = () => {
   const [greeting, setGreeting] = useState('');
@@ -25,10 +26,27 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      <ThreeJSBackground />
+      {/* Background with GIF */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/background.gif"
+          alt="Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/60 via-gray-800/60 to-black/60"></div>
+        
+        {/* Blob animations */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-green-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-purple-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-1/4 left-1/2 w-60 h-60 bg-blue-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+      </div>
       
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-800/50 to-black/70 z-0"></div>
+      {/* Three.js Background (optional - you can choose between this or the GIF) */}
+      {/* <ThreeJSBackground /> */}
       
       <div className="text-center z-10 px-4 max-w-3xl">
         <motion.h1 
