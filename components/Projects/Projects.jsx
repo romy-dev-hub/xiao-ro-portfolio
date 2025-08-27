@@ -49,7 +49,6 @@ const projects = [
     link: "https://github.com/romy-dev-hub/lib-project-",
     image: "/library.png"
   },
-  // Add your newer projects from GitHub here
 ];
 
 const Projects = () => {
