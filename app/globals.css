@@ -31,3 +31,18 @@ html, body, #root {
   height: 100%; 
   scroll-behavior: smooth;
 }
+
+/* Add perspective to the project cards container */
+.perspective {
+  perspective: 1000px;
+}
+
+/* Ensure 3D transforms work correctly */
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Optional: Add a subtle shadow to enhance the 3D effect */
+.project-card-shadow {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
