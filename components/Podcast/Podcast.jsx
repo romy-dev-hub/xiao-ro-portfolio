@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Podcast = () => {
   return (
-    <section id="podcast" className="py-20 bg-gray-900">
+    <section id="podcast" className="py-20 bg-gray-800">
       <div className="container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
