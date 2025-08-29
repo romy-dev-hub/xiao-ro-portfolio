@@ -46,3 +46,84 @@ html, body, #root {
 .project-card-shadow {
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
 }
+
+/* Enhanced project card effects */
+.project-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent 0%, rgba(34, 197, 94, 0.1) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* Glass morphism effect for cards */
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Subtle glow effect */
+.project-card {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+  box-shadow: 0 15px 40px -10px rgba(34, 197, 94, 0.2);
+}
+
+/* Animation for filter buttons */
+.filter-btn {
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+}
+
+/* Blob animation */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-card {
+    height: 80vw;
+    max-height: 350px;
+  }
+}
