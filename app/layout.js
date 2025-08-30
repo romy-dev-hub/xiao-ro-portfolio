@@ -12,6 +12,9 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Romy (Xiao Ro) - Portfolio',
   description: 'Front-End Web Developer & Games Creator',
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
