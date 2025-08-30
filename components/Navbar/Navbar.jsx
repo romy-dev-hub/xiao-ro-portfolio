@@ -55,7 +55,7 @@ const Navbar = () => {
           <img 
             src="/logo.png" 
             alt="Xiao Luo Logo" 
-            className="w-15 h-15"  // adjust size as you want
+            className="w-15 h-15"  // logo size
           />
         </motion.div>
 
