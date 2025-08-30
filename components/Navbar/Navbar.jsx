@@ -48,13 +48,17 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <motion.div 
-          className="text-2xl font-bold text-green-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-        >
-          Xiao Ro
+>
+          <img 
+            src="/logo.png" 
+            alt="Xiao Luo Logo" 
+            className="w-15 h-15"  // adjust size as you want
+          />
         </motion.div>
+
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex">
