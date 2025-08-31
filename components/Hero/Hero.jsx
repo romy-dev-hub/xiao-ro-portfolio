@@ -1,8 +1,7 @@
-// components/Hero/Hero.jsx
+// components/Hero/Hero.jsx (updated)
 'use client';
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import ThreeJSBackground from '../ThreeJSBackground';
 import Image from 'next/image';
 
 const Hero = () => {
@@ -25,7 +24,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden no-glowing-bg">
       {/* Background with GIF */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -44,9 +43,6 @@ const Hero = () => {
           <div className="absolute bottom-1/4 left-1/2 w-60 h-60 bg-blue-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
         </div>
       </div>
-      
-      {/* Three.js Background (optional - you can choose between this or the GIF) */}
-      {/* <ThreeJSBackground /> */}
       
       <div className="text-center z-10 px-4 max-w-3xl">
         <motion.h1 

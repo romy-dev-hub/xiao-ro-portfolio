@@ -1,7 +1,9 @@
+// app/layout.js (updated)
 // app/layout.js
 
 import { Poppins } from 'next/font/google';
 import './globals.css';
+import ThreeJSBackground from '@/components/ThreeJSBackground';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -21,6 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <body className="bg-gray-900 text-white font-poppins min-h-screen">
+        <ThreeJSBackground />
         {children}
       </body>
     </html>

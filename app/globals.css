@@ -181,3 +181,29 @@ html, body, #root {
     font-size: 2rem;
   }
 }
+
+/* Add to your globals.css */
+.no-glowing-bg ~ div > .fixed {
+  display: none;
+}
+
+/* Ensure content stays above the Three.js canvas */
+section:not(#home) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Add to your globals.css */
+.fixed.inset-0.z-0 {
+  z-index: 0;
+}
+
+#main-content {
+  z-index: 10;
+  position: relative;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
