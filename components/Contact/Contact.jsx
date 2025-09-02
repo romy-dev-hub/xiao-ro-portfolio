@@ -6,8 +6,6 @@ import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID);
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -25,9 +23,10 @@ const Contact = () => {
     setIsSubmitting(true);
 
     emailjs.send(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, 
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, 
-      formData
+      'service_a6aye4m', 
+      'template_3ymoe94', 
+      formData, 
+      '6-CwRsgNTMSlp0EbV'
     )
     .then(() => {
       toast.success('Message sent! Thank you for reaching out', {
